@@ -1,0 +1,374 @@
+/*Imatge de fons*/
+body{
+	background-image:url(https://www.publico.es/uploads/2019/07/03/5d1cb93a84506.jpg);
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center center;
+}
+
+
+/* Menú*/ 
+nav a{
+	text-decoration:none;
+	color: white;
+	font-size: 22px;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+}          
+nav li{
+	display:inline-block;
+	width:28%;
+	height:30px;
+	padding:20px 10px;
+	text-align:center;
+	position:relative;
+}         
+nav li:hover{
+	background-color: rgb(224, 144, 24, 80%);
+	border-radius: 10px;
+}          
+.menu1{
+	background-color: rgb(0, 0, 0, 80%);
+	border-radius: 10px;
+	margin-left: 10%;
+	position: absolute;
+	background:#5e7e88;
+	margin-left :-100%;
+	transition: all 0.5s;
+}
+.logo{
+	display: flex;
+	text-align: center;
+	width: 100%;
+}
+.menu2{
+	background-color: rgb(0, 0, 0, 80%);
+	border-radius: 10px;
+	display: block;
+
+	position: absolute;
+    background:#5e7e88;  
+    margin-left :-100%;
+    transition: all 0.5s;
+	margin-top: 14em;
+}
+.blocmenu{
+	display: flex;
+	align-items: flex-start;
+}
+header{
+	position: fixed;
+}
+
+
+
+/*que no aparegui el recuadre*/
+#btn-menu{   
+    display:none;
+}
+/*que aparegui el menu lateral*/
+header label {
+    display:block;
+    width: 40px;
+    height: 40px;
+    padding: 10px; 
+}
+#btn-menu:checked ~ .menu1  {
+    margin: 0;
+}
+#btn-menu:checked ~ .menu2 {
+    margin: 0;
+	margin-top: 14em;
+}
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex; 
+    flex-direction: column;  
+}
+nav li {
+    border-right: 1px solid;
+    border: 0px; 
+    
+    list-style-type: none;
+    display: inline;
+    /*per a que surti horitzontal*/
+    padding-right: 10px;
+    /*caracteristiques llistes ordenades*/
+}
+
+
+
+/*Color de les lletres en tots els paràgrafs*/
+p{
+    color: white;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+/* Color dels titols de nivell 2*/
+h2{
+	text-align: center;
+	font-size: 5m;
+	color: black;
+	-webkit-text-stroke: 3px white;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+	line-height: 5%;
+}
+
+
+/* Color dels titols de nivell 3*/
+h3{
+	text-align: center;
+	font-size: 3em;
+	color: black;
+	-webkit-text-stroke: 2px white;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+	line-height: 3%;
+}
+
+
+/*Títol de la pàgina amagat*/
+.titolprincipal{
+	visibility: hidden;
+}
+
+
+/*Contenedor de la imatge del cartell i del botó per comprar entrades*/
+.cartellresu{
+	display:grid;
+	align-items: center;
+	grid-template-columns: 5% 90% 5%;
+}
+
+
+/*Imatge del cartell del festival*/
+.cartelera{
+	grid-row: 1;
+	grid-column: 2;
+	width: 50%;
+	height: 95%;
+	margin: auto;
+}
+
+
+/*Botó per comprar les entrades del fetival*/
+.entradasfestival{
+	grid-row: 2;
+	grid-column: 2;
+	border: none;
+	background-color: rgb(224, 144, 24);
+	padding: 2% 2%;
+	margin: auto;
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: 18px;
+	color: white;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+/*Fotos de cada catelera individual, dins dels acordeons*/
+.fotosconcerts{
+	width: 20%;
+	height: 20%;
+	padding: 2%;
+	float: left;
+}
+
+
+/*Botó per comprar les entrades dins dels acordeons*/
+.entradas{
+	border: none;
+	background-color: rgb(224, 144, 24);
+	padding: 2% 2%;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	border-radius: 10px;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+	color: white;
+}
+
+
+/*Acordeó*/
+.titol {
+	background-color: rgb(0, 0, 0, 80%);
+	color: white;
+	cursor: pointer;
+	padding: 18px 10px;
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	text-align: center;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+	border-radius: 10px;
+	font-size: 20px;
+}
+.active, .titol:hover {
+	background-color: rgb(224, 144, 24, 80%);
+}
+.caixa {
+	padding: 18px;
+	width: 68%;
+	background-color: rgb(39, 39, 39,80%);
+	display: none;
+	overflow: hidden;
+    color: white;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 10px;
+}
+iframe{
+	width: 100%;
+}
+
+
+/*Questionari per contactar*/
+input[type=text], select, textarea {
+	width: 100%; 
+	padding: 12px; 
+	border: 1px solid white; 
+	border-radius: 4px; 
+	box-sizing: border-box; 
+	margin-top: 6px; 
+	margin-bottom: 16px; 
+	resize: vertical
+} 
+input[type=submit] {
+	background-color: rgb(224, 144, 24, 80%);
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+} 
+input[type=submit]:hover {
+	background-color: rgb(235, 174, 82, 80%);
+}
+.container {
+	background-color: rgb(0, 0, 0, 80%);
+	padding: 20px;
+	color:white;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 10px;
+}
+#nombre{
+	color: white;
+	background-color: rgb(141, 141, 141, 50%);
+}
+#apellidos{
+	color: white;
+	background-color: rgb(141, 141, 141, 50%);
+}
+#asunto{
+	color: white;
+	background-color: rgb(141, 141, 141, 50%);
+}
+#mensaje{
+	color: white;
+	background-color: rgb(141, 141, 141, 50%);
+}
+
+
+/*Footer de final de pàgina*/
+footer {
+	text-align: center;
+	padding: 3px;
+	background-color: rgb(36,36,44);
+	color: white;
+}
+
+.sponsor{
+	width: 6%;
+	height: 6%;	
+}
+
+.sponsor2{
+	color: rgb(116,100,79);
+	text-decoration:none;
+	font-family: 'Alkalami', serif;
+	font-family: 'Oswald', sans-serif;
+	padding-left: 2rem;
+}
+
+@media ( min-width: 1000px)  {
+
+	header label {
+        display:none;
+        width: 40px;
+        height: 40px;
+        padding: 10px; 
+    }
+	.blocmenu {
+		display: flex;
+		flex-direction: row;
+		width:100%;
+		justify-content: center;
+	}
+	nav ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	nav li {
+		border-right: 1px solid;
+		border: 0px; 
+		
+		list-style-type: none;
+		display: inline;
+		/*per a que surti horitzontal*/
+		padding-right: 10px;
+		/*caracteristiques llistes ordenades*/
+	}
+	.menu1 li {
+		padding-right: 26px;
+	}
+	#btn-menu:checked ~ .menu1  {
+        margin: 0;
+    }
+	#btn-menu:checked ~ .menu2  {
+        margin: 0;
+    }
+	        
+.menu1{
+	background-color: rgb(0, 0, 0, 80%);
+	border-radius: 10px;
+	display: flex;
+	margin: 0 63% 0 0;
+	flex:  0 0 20%;
+	justify-content: flex-start;
+}
+
+.menu2{
+	background-color: rgb(0, 0, 0, 80%);
+	border-radius: 10px;
+	display: flex;
+	margin: 0 0 0 63%;
+	flex: 0 0 20%;
+	justify-content: flex-end;
+}
+  }
